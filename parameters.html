@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+    <title id="pageTitle">Paramètres</title>
+    <script>window.$ = window.jQuery = require('./js/jquery.min');</script>
+
+
+    <script src="./colorpicker/spectrum.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./colorpicker/spectrum.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-9">
+
+                <div class="form-group">
+                    <label for="sizes">Taille du QR Code (en pixels)</label>
+                    <select class="form-control" id="sizes">
+                        <option value=300>300x300</option>
+                        <option value=400>400x400</option>
+                        <option value="500">500x500</option>
+                        <option value="750">750x750</option>
+                        <option value="1000">1000x1000</option>
+                    </select>
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <div class="jumbotron" id="container">
+                        <h5>Couleur primaire</h5>
+                        <input type='text' class='basic form-control'  id="cp"/>
+                    </div>
+
+                    <div class="jumbotron" id="container2">
+                        <h5>Couleur secondaire</h5>
+                        <input type='text' class='basic form-control'  id="cs"/>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-info col-12" id="setInfos">Valider</button>
+
+                <div class="invisible my-1" role="alert" id="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./colorpicker/spectrum.min.js"></script>
+    <script src="./js/parameters.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "QRCode",
+  "version": "1.0.0",
+  "author": "Yann et Ilias",
+  "description": "QR Code generator from string",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "win-package": "electron-packager . --platform=win32 --overwrite",
+    "win-build": "electron-builder --win"
+  },
+  "build": {
+    "productName": "QRCodeGenerator",
+    "nsis": {
+      "createStartMenuShortcut": true,
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "win": {
+      "target": "nsis",
+      "publisherName": "IliasYann"
+    }
+  },
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^19.26.3",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "electron-store": "^6.0.1",
+    "qrcode": "^1.4.4"
+  }
+}
